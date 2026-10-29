@@ -1,0 +1,174 @@
+/* website fonts */
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("../src/assets/fonts/LibreBaskerville-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("../src/assets/fonts/LibreBaskerville-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../src/assets/fonts/Satoshi-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../src/assets/fonts/Satoshi-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../src/assets/fonts/Satoshi-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+/* website color scheme */
+:root {
+  --ink: #222223;
+  --paper: #fefefe;
+  --crimson: #1877d2;
+  --blush: #bce7ff;
+  --coral: #125aa3;
+  --tile: #f3f1f1;
+  --muted: #6b6b6d;
+
+  --font-display: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  --font-ui: "Satoshi", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --radius-card: 18px;
+  --radius: 10px;
+}
+
+/* basic page styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  line-height: 1.5;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+}
+/* website header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 15px 4%;
+  background: var(--paper);
+  box-shadow: 0 2px 12px rgba(34, 34, 35, 0.05);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--blush);
+}
+.itineratrip,
+.website-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-links a,
+.signup {
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+.nav-links a:hover,
+.signup:hover {
+  background: var(--tile);
+}
+.accounts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.login {
+  padding: 10px 22px;
+  border-radius: 20px;
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+.login:hover {
+  background: var(--crimson);
+}
+/* sections loaded from separate HTML files */
+.page-section {
+  padding: 60px 5%;
+  scroll-margin-top: 85px;
+}
+#destinations,
+#how-it-works,
+#faq,
+#itinerary {
+  scroll-margin-top: 85px;
+}
+/* smaller screens */
+@media (max-width: 700px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+  }
+  .nav-links a,
+  .signup {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+  .accounts {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ItineraTrip - Find your next destination</title>
+
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/index_styles.css" />
+    <link rel="stylesheet" href="../css/destinations_styles.css" />
+    <link rel="stylesheet" href="../css/faq_styles.css" />
+    <link rel="stylesheet" href="../css/how_it_works_styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <a class="brand" href="#home">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="itineratrip">ItineraTrip</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#destinations">Destinations</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQs</a>
+      </nav>
+
+      <div class="accounts">
+        <a class="signup" href="SignUp.html">Sign Up</a>
+        <a class="login" href="LogIn.html">Log In</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="welcome" id="home">
+        <h1 class="slogan" id="slogan">
+          Tell us where, when and how many. We'll do the rest.
+        </h1>
+
+        <p class="description">Curate your travel with ItineraTrip</p>
+
+        <!-- the location, budget, people, date bar -->
+        <section class="white_background" aria-labelledby="slogan">
+          <form class="search_form" action="itinerary.html" method="get">
+            <div class="gray-box place-box">
+              <label for="destination">Where do you want to go?</label>
+
+              <div class="input_box">
+                <i data-lucide="search" class="search_icon"></i>
+                <input
+                  type="text"
+                  id="destination"
+                  name="destination"
+                  placeholder="Capital, Country"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+
+            <!-- 3 budget options -->
+            <fieldset class="gray-box budget-box">
+              <legend>Budget range</legend>
+              <div class="budget-options">
+                <input type="radio" id="budget1" name="budget" value="1" />
+                <label for="budget1">$</label>
+
+                <input type="radio" id="budget2" name="budget" value="2" />
+                <label for="budget2">$$</label>
+
+                <input type="radio" id="budget3" name="budget" value="3" />
+                <label for="budget3">$$$</label>
+              </div>
+            </fieldset>
+
+            <!-- people coming -->
+            <div class="gray-box people-box">
+              <label for="people">How many are coming?</label>
+
+              <div class="input_box">
+                <i data-lucide="users" class="people-icon"></i>
+
+                <!-- how many people could join -->
+                <select id="people" name="people">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8+">8+</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="gray-box date-box">
+              <label for="from">From</label>
+              <input type="date" id="from" name="from" />
+            </div>
+
+            <div class="gray-box date-box">
+              <label for="to">To</label>
+              <input type="date" id="to" name="to" />
+            </div>
+
+            <div class="gray-box date-box">
+              <label for="time">Time</label>
+              <input type="time" id="time" name="time" />
+            </div>
+
+            <button
+              class="search-button"
+              type="submit"
+              aria-label="Search trips"
+            >
+              <i data-lucide="search" class="search-button-icon"></i>
+            </button>
+          </form>
+        </section>
+      </section>
+
+      <!-- all the parts like the destinations, faq, how it works screen here -->
+      <section id="destinations" class="page-section">
+        <div id="destinations-content"></div>
+      </section>
+
+      <section id="how-it-works" class="page-section">
+        <div id="how-it-works-content"></div>
+      </section>
+
+      <section id="faq" class="page-section">
+        <div id="faq-content"></div>
+      </section>
+    </main>
+
+    <!-- to be done -->
+    <!-- <script src="../../javascript/scroll.js"></script> -->
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+/* main page */
+body {
+  background: var(--paper);
+}
+/* welcome section */
+.welcome {
+  position: relative;
+  isolation: isolate;
+  padding: 70px 5%;
+  text-align: center;
+  background: var(--paper);
+}
+.welcome::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../src/assets/images/palawan.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  transform: scale(1.02);
+  z-index: -1;
+}
+.slogan {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  color: var(--paper);
+}
+.description {
+  margin: 15px 0 35px;
+  color: var(--paper);
+  font-size: 1.1rem;
+}
+/* trip search panel */
+.white_background {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 32px;
+  background: var(--paper);
+  box-shadow: 0 10px 30px rgba(34, 34, 35, 0.12);
+}
+.search_form {
+  display: grid;
+  grid-template-columns:
+    minmax(220px, 2fr) minmax(130px, 1.2fr)
+    minmax(130px, 1fr);
+  gap: 12px;
+  align-items: stretch;
+}
+.gray-box {
+  min-width: 0;
+  margin: 0;
+  padding: 12px 16px; 
+  border: none;
+  border-radius: 20px; 
+  background: var(--tile); 
+  text-align: left;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.gray-box:hover {
+  background: #ece8e8;
+}
+.gray-box label,
+.gray-box legend {
+  display: block; 
+  margin-bottom: 5px; 
+  padding: 0;
+  color: var(--muted);  
+  font-size: 0.8rem; 
+  text-align: left;
+}
+.budget-box {
+  min-width: 0;
+}
+.input_box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.search_icon,
+.people-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0; 
+  fill: none; 
+  stroke: var(--ink);
+  stroke-width: 2; 
+  stroke-linecap: round; 
+  stroke-linejoin: round;
+}
+
+.search-button-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round; 
+  stroke-linejoin: round;
+}
+
+/* text, date, time and guest inputs */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+  width: 100%;
+  min-width: 0;
+  padding: 4px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+input::placeholder {
+  color: var(--ink);
+  opacity: 0.6;
+}
+select {
+  cursor: pointer;
+}
+
+/* budget options */
+.budget-options {
+  display: flex;
+  gap: 6px;
+}
+.budget-options input {
+  position: absolute;
+  width: 1px; 
+  height: 1px; 
+  overflow: hidden; 
+  opacity: 0;
+}
+
+.budget-options label {
+  flex: 1;
+  margin: 0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  text-align: center; 
+  font-weight: 700; 
+  cursor: pointer; 
+  transition: background 0.2s ease;
+}
+.budget-options label:hover {
+  background: var(--blush);
+}  
+.budget-options input:checked + label {
+  background: var(--crimson);
+  color: var(--paper); 
+}
+.budget-options input:focus-visible + label {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+}
+
+/* search button */
+.search-button {
+  grid-column: 1 / -1;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  gap: 10px;
+  min-height: 52px;
+  padding: 12px 24px; 
+  border: none;
+  border-radius: 18px; 
+  background: var(--crimson); 
+  color: var(--paper);
+  font-family: var(--font-display); 
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.search-button:hover {
+  background: var(--coral);
+}
+ 
+.search-button:active {
+  transform: scale(0.99); 
+}
+
+.search-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .search_form { 
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .place-box,
+  .search-button {
+    grid-column: 1 / -1;
+  }
+}
+
+/* phone */
+@media (max-width: 560px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .search_form {
+    grid-template-columns: 1fr;
+  }
+  .white_background {
+    padding: 18px;
+    border-radius: 24px;
+  }
+  .welcome {
+    padding: 45px 5%;
+  }
+  .slogan {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .search-button {
+    grid-column: auto;
+  }
+}
