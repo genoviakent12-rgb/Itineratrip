@@ -1,0 +1,126 @@
+/* destinations page */
+.destinations {
+  min-height: calc(100vh - 70px);
+  padding: 55px 0 70px;
+  background: var(--paper);
+}
+.section {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+/* page heading */
+.heading {
+  margin: 0 0 12px;
+  color: var(--crimson);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.title {
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  color: var(--ink);
+}
+.description {
+  max-width: 500px;
+  margin: 18px auto 40px;
+  padding: 0 15px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+/* pictures can be scrolled sideways */
+.list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 22px;
+  width: 100%;
+  overflow-x: hidden;
+}
+/* each destination card */
+.images {
+  flex: 0 0 260px;
+  height: auto;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--tile);
+  box-shadow: 0 5px 15px rgba(34, 34, 35, 0.1);
+  scroll-snap-align: start;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.images:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(34, 34, 35, 0.16);
+}
+/* destination image */
+.images img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+/* destination name below the image */
+.place-name {
+  margin: 0;
+  padding: 14px 10px;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* scroll message */
+.scroll-note {
+  margin-top: 20px;
+  color: var(--muted);
+}
+.scroll-arrow {
+  display: inline-block;
+  color: var(--crimson);
+  font-size: 30px;
+  line-height: 1;
+}
+.scroll-text {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+}
+/* smaller screens */
+@media (max-width: 700px) {
+  .destinations {
+    padding-top: 40px;
+  }
+  .description {
+    margin-bottom: 25px;
+  }
+  .list {
+    gap: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .images {
+    flex-basis: 220px;
+  }
+  .images img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .images {
+    flex-basis: 190px;
+  }
+  .images img {
+    height: 250px;
+  }
+  .place-name {
+    font-size: 0.85rem;
+  }
+  .scroll-text {
+    font-size: 0.85rem;
+  }
+}
