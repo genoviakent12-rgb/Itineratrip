@@ -10,6 +10,12 @@ async function loadPage(file, sectionId) {
     const content = page.querySelector("main");
 
     section.innerHTML = content.innerHTML;
+
+    // Create icons after loading the page content.
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+
     const images = section.querySelectorAll("img");
 
     images.forEach((image) => {
