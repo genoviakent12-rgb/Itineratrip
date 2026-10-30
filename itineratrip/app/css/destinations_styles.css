@@ -22,7 +22,7 @@
   font-size: clamp(2.3rem, 5vw, 4rem);
   color: var(--ink);
 }
-.description {
+.destinations-description {
   max-width: 500px;
   margin: 18px auto 40px;
   padding: 0 15px;
@@ -74,27 +74,12 @@
   text-align: center;
 }
 
-/* scroll message */
-.scroll-note {
-  margin-top: 20px;
-  color: var(--muted);
-}
-.scroll-arrow {
-  display: inline-block;
-  color: var(--crimson);
-  font-size: 30px;
-  line-height: 1;
-}
-.scroll-text {
-  margin: 8px 0 0;
-  font-size: 0.9rem;
-}
 /* smaller screens */
 @media (max-width: 700px) {
   .destinations {
     padding-top: 40px;
   }
-  .description {
+  .destinations-description {
     margin-bottom: 25px;
   }
   .list {
