@@ -1,0 +1,93 @@
+/* faq container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 5%;
+  text-align: center;
+}
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--ink);
+  margin-bottom: 40px;
+}
+/* faq list wrapper */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+/* expandable accordion card */
+.item {
+  background: var(--tile);
+  border-radius: 20px;
+  padding: 16px 24px;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+.item:hover {
+  background: #ece8e8;
+}
+.item[open] {
+  background: var(--paper);
+  box-shadow: 0 4px 20px rgba(34, 34, 35, 0.08);
+}
+/* clickable question summary */
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none; 
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.2s ease;
+}
+/* arrow will rotate when tapped */
+.item[open] .arrow {
+  transform: rotate(180deg);
+  stroke: var(--crimson);
+}
+/* answer text box */
+.answer {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.answer p {
+  margin: 0;
+}
+/* mobile responsive */
+@media (max-width: 560px) {
+  .container {
+    padding: 35px 5%;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .item {
+    padding: 14px 18px;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+}
