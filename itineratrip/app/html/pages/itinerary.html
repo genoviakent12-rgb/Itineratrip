@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Itinerary | ItineraTrip</title> 
+
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/Itinerary_styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="../index.html" class="brand"> 
+        <span class="logo-circle" aria-hidden="true"></span>
+        <span class="itineratrip">ItineraTrip</span> 
+      </a>
+ 
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="Destinations.html">Destinations</a>
+        <a href="HowItWorks.html">How It Works</a>
+        <a href="FAQ.html">FAQ</a>
+      </nav>
+    </header> 
+
+    <main class="results itinerary-page">
+      <div class="trip-heading">
+        <h1>Your Itinerary</h1>
+        <p>
+          Your journey, organized day by day. Explore your destinations and make
+          the most of every stop.  
+        </p>
+      </div>
+ 
+      <section id="results" class="results"> 
+        <div class="trip-container"> 
+          <header class="itinerary-topbar"> 
+            <div class="itinerary-logo">IT</div>
+            <div class="countrycontainer">Your destination</div>
+          </header>
+
+          <aside class="itinerary-sidebar">
+            <section class="itinerary-sidebar-section">
+              <h2 class="itinerary-sidebar-title">Days</h2>
+              <div
+                id="itinerary-day-list"
+                class="itinerary-day-list"
+                aria-label="Trip days"
+              ></div>
+            </section>
+
+            <section class="itinerary-sidebar-section">
+              <h2 class="itinerary-sidebar-title">Summary</h2>
+              <div id="itinerary-summary" class="itinerary-summary-card">
+                Your trip overview will appear here.
+              </div> 
+            </section>
+          </aside> 
+
+          <div class="itinerary-main">
+            <section class="itinerary-location-card">
+              <div class="itinerary-location-copy">
+                <h2
+                  id="itinerary-location-name"
+                  class="itinerary-location-name"
+                >
+                  Your Destination
+                </h2>
+
+                <div class="itinerary-location-meta">
+                  <span id="itinerary-total-days">Total days</span>
+                  <span class="date-separator">•</span>
+                  <span id="itinerary-dates">Travel dates</span>
+                </div>
+              </div>
+
+              <div class="itinerary-budget">
+                <div class="itinerary-budget-label">Allocated budget</div>
+                <p id="itinerary-budget-amount" class="itinerary-budget-amount">
+                  — 
+                </p>
+                <div id="itinerary-people" class="itinerary-people">
+                  Travelers 
+                </div>
+              </div>
+            </section>
+
+            <section
+              id="itinerary-day-panel"
+              class="itinerary-day-panel"
+              aria-live="polite" 
+            >
+              <h2 class="itinerary-day-heading">Day 1: Your Destinations</h2>
+
+              <div class="itinerary-empty" id="itinerary-empty">
+                Generate a trip from the home page to view your personalized
+                daily itinerary.
+              </div>
+            </section>
+
+            <section id="itinerary-extras" class="itinerary-extras"></section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 ItineraTrip. All rights reserved.</p>
+    </footer>
+
+    <script src="../../javascript/itinerary.js" defer></script>
+  </body>
+</html>

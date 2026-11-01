@@ -1,0 +1,140 @@
+body {
+  background: var(--paper);
+}
+
+/* Page heading */
+.itinerary-page {
+  width: 90%;
+  margin: 40px auto;
+}
+.trip-heading {
+  margin-bottom: 20px;
+}
+
+/* Main itinerary box */
+#results {
+  margin: 20px auto;
+}
+.trip-container {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  background: white;
+}
+/* Top row */
+.itinerary-topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.itinerary-logo {
+  width: 38px;
+  height: 38px;
+  padding-top: 8px;
+  border-radius: 50%;
+  background: var(--crimson);
+  color: white;
+  text-align: center;
+}
+.countrycontainer {
+  margin-left: auto;
+  color: var(--muted);
+}
+/* Sidebar */
+.itinerary-sidebar {
+  margin-top: 20px;
+}
+.itinerary-sidebar-section {
+  margin-bottom: 20px;
+}
+.itinerary-sidebar-title {
+  margin-bottom: 10px;
+}
+.itinerary-day-list {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.itinerary-day-button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+}
+
+.itinerary-day-button.is-active {
+  background: #edf6ff;
+}
+
+.itinerary-summary-card {
+  padding: 12px;
+  border-radius: 10px;
+  background: #f3f1f1;
+  color: var(--muted);
+}
+/* Trip details */
+.itinerary-main {
+  margin-top: 20px;
+}
+.itinerary-location-card {
+  padding: 15px;
+  border-radius: 15px;
+  background: #f3f1f1;
+}
+.itinerary-location-meta {
+  display: flex;
+  gap: 8px;
+  color: var(--muted);
+} 
+.date-separator {
+  color: var(--muted);
+} 
+.itinerary-budget {
+  margin-top: 15px;
+}
+.itinerary-budget-label,
+.itinerary-people {
+  color: var(--muted);
+}
+.itinerary-budget-amount {
+  margin: 5px 0;
+}
+.itinerary-empty {
+  color: var(--muted);
+}
+
+/* Activities and hotels */
+.itinerary-stop,
+.itinerary-hotel-card,
+.itinerary-extra-section {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.itinerary-stop p,
+.itinerary-hotel-card p,
+.itinerary-extra-section p {
+  color: var(--muted);
+}
+.itinerary-link {
+  color: var(--coral);
+}
+.itinerary-extras {
+  margin-top: 20px;
+}
+.itinerary-hotel-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.site-footer {
+  padding: 20px;
+  color: var(--muted);
+  text-align: center;
+}
