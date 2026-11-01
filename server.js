@@ -16,7 +16,7 @@ const BUDGET_TYPES = {
 const ALLOWED_PEOPLE = ["1", "2", "3", "4", "5", "6", "7", "8+"];
 // will only read json files up to 20kb
 app.use(express.json({ limit: "20kb" }));
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, "itineratrip")));
 
 function parseDate(value) {
   // dates must use YYYY-MM-DD format and be real calendar dates.
